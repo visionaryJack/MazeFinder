@@ -10,12 +10,14 @@ package mazefinder;
  * @author 10kwa
  */
 public class MazeFinder {
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+       Driver runMaze = new Driver();
+       runMaze.findPath();
     }
     
 }
