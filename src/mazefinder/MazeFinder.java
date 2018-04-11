@@ -11,6 +11,7 @@ package mazefinder;
  */
 public class MazeFinder {
     
+    
     /**
      * @param args the command line arguments
      */
