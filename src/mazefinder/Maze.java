@@ -15,21 +15,8 @@ public class Maze {
     private int handY; 
     private int handX; 
     private static char [][] mazeAr;
-    public Maze() {
-        mazeAr = new char[][]{
-            {'#','#','#','#','#','#','#','#','#','#','#','#'},
-            {'#','.','.','.','#','.','.','.','.','.','.','#'},
-            {'.','.','#','.','#','.','#','#','#','#','.','#'},
-            {'#','#','#','.','#','.','.','.','.','#','.','#'},
-            {'#','.','.','.','.','#','#','#','.','#','.','#'},
-            {'#','#','#','#','.','#','F','#','.','#','.','#'},
-            {'#','.','.','#','.','#','.','#','.','#','.','#'},
-            {'#','#','.','#','.','#','.','#','.','#','.','#'},
-            {'#','.','.','.','.','.','.','.','.','#','.','#'},
-            {'#','#','#','#','.','#','.','#','#','#','.','#'},
-            {'#','.','.','.','.','#','.','#','.','.','.','#'},
-            {'#','#','#','#','#','#','#','#','#','#','#','#'},
-        };
+    public Maze(char[][] in) {
+        mazeAr = in;
         playerX = 0;
         playerY = 3;
         handX = 0;
@@ -52,7 +39,7 @@ public class Maze {
         mazeAr[a][b] = c;
     }
     public void setPlayerPos(int a, int b){
-        setMazeAr(a, b, 'X');
+        setMazeAr(a, b, 'O');
     }
     //get methods
     public int getPlayerX() {
@@ -70,7 +57,7 @@ public class Maze {
     public char[][] getMazeAr() {
         return mazeAr;
     }
-    public char seeAhead() {
+    public char seeCurrent() {
         return mazeAr[playerY][playerX];
     }
     
