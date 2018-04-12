@@ -9,6 +9,7 @@ package mazefinder;
  *
  * @author 10kwa
  */
+//maze class create array of char's has methods to operate array
 public class Maze {
     private int playerY;
     private int playerX; 
@@ -17,10 +18,10 @@ public class Maze {
     private static char [][] mazeAr;
     public Maze(char[][] in) {
         mazeAr = in;
-        playerX = 0;
-        playerY = 3;
-        handX = 0;
-        handY = 4;
+        //playerX = 0;
+        //playerY = 2;
+        //handX = 0;
+        //handY = 4;
     }
     //set methods
     public void setPlayerY(int a) {
@@ -35,10 +36,10 @@ public class Maze {
     public void setHandX(int a) {
         handX = a;
     }
-    public void setMazeAr(int a, int b, char c) {
+    public void setMazeAr(int a, int b, char c) {//set array value, used to mark X
         mazeAr[a][b] = c;
     }
-    public void setPlayerPos(int a, int b){
+    public void setPlayerPos(int a, int b){//set position marker
         setMazeAr(a, b, 'O');
     }
     //get methods
